@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026 Cary-rowen <manchen_0528@outlook.com>
+# This file is distributed under the same license as the 'winFormsNet48Fixes' package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'winFormsNet48Fixes' '1.1.0'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2026-03-16 01:16+0800\n"
+"PO-Revision-Date: 2026-03-16 01:50+0800\n"
+"Last-Translator: Cary-rowen <manchen_0528@outlook.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. Add-on summary/title, usually the user visible name of the add-on
+#: buildVars.py:12
+msgid "WinForms .NET 4.8 Fixes"
+msgstr "WinForms .NET 4.8 修复"
+
+#. Add-on description
+#: buildVars.py:14
+msgid ""
+"Consolidated accessibility fixes for .NET 4.8 WinForms applications, "
+"including ComboBox navigation and MenuItem checked state reporting."
+msgstr ""
+"针对 .NET 4.8 WinForms 应用程序的辅助功能综合修复，包括读出组合框选中项改"
+"变，读出菜单项选中状态和辅助功能描述信息。"
+
+#. Brief changelog for this version
+#: buildVars.py:18
+msgid ""
+"### 1.1.0\n"
+"* Restored missing MenuItem description reporting by falling back to legacy "
+"properties.\n"
+"### 1.0.0\n"
+"* Initial release.\n"
+"* Fixed ComboBox selection reporting while collapsed (#17454).\n"
+"* Fixed ToolStripMenuItem missing checked state reporting (#19335)."
+msgstr ""
+"### 1.1.0\n"
+"* 修复了菜单项（MenuItem）说明信息（Description）缺失的问题。\n"
+"### 1.0.0\n"
+"* 初始版本。\n"
+"* 修复了组合框在折叠状态下未读出选项改变的问题 (#17454)。\n"
+"* 修复了 ToolStripMenuItem 未读出选中状态的问题 (#19335)。"
