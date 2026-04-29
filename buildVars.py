@@ -1,7 +1,13 @@
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
 
-from site_scons.site_tools.NVDATool.typings import AddonInfo, BrailleTables, SymbolDictionaries
+from site_scons.site_tools.NVDATool.typings import AddonInfo, BrailleTables, SymbolDictionaries, SpeechDictionaries
+
+# Since some strings in `addon_info` are translatable,
+# we need to include them in the .po files.
+# Gettext recognizes only strings given as parameters to the `_` function.
+# To avoid initializing translations in this module we simply import a "fake" `_` function
+# which returns whatever is given to it as an argument.
 from site_scons.site_tools.NVDATool.utils import _
 
 # Add-on information variables
@@ -51,4 +57,21 @@ excludedFiles: list[str] = []
 baseLanguage: str = "en"
 markdownExtensions: list[str] = ["markdown.extensions.tables"]
 brailleTables: BrailleTables = {}
+
+# Custom speech symbol dictionaries
+# Symbol dictionary files reside in the locale folder, e.g. `locale\en`, and are named `symbols-<name>.dic`.
+# If your add-on includes custom speech symbol dictionaries (most will not), fill out this dictionary.
+# Each key is the name of the dictionary,
+# with keys inside recording the following attributes:
+# displayName (name of the speech dictionary shown to users and translatable),
+# mandatory (True when always enabled, False when not).
 symbolDictionaries: SymbolDictionaries = {}
+
+# Custom speech dictionaries (distinct from symbol dictionaries above)
+# Speech dictionary files reside in the speechDicts folder and are named `name.dic`.
+# If your add-on includes custom speech (pronunciation) dictionaries (most will not), fill out this dictionary.
+# Each key is the name of the dictionary,
+# with keys inside recording the following attributes:
+# displayName (name of the speech dictionary shown to users and translatable),
+# mandatory (True when always enabled, False when not).
+speechDictionaries: SpeechDictionaries = {}
