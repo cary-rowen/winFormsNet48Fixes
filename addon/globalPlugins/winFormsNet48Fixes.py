@@ -29,7 +29,7 @@ class WinFormsMenuItem(MenuItem):
 		# Fallback to LegacyIAccessiblePattern to retrieve the real checked state.
 		try:
 			accState = self.UIAElement.GetCurrentPropertyValue(
-				UIAHandler.UIA_LegacyIAccessibleStatePropertyId
+				UIAHandler.UIA_LegacyIAccessibleStatePropertyId,
 			)
 			if accState & oleacc.STATE_SYSTEM_CHECKED:
 				states.add(controlTypes.State.CHECKABLE)
@@ -45,7 +45,7 @@ class WinFormsMenuItem(MenuItem):
 		# Retrieve directly from LegacyIAccessibleDescription property.
 		try:
 			return self.UIAElement.GetCurrentPropertyValue(
-				UIAHandler.UIA_LegacyIAccessibleDescriptionPropertyId
+				UIAHandler.UIA_LegacyIAccessibleDescriptionPropertyId,
 			)
 		except COMError:
 			return None

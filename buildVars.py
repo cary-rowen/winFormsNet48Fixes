@@ -13,14 +13,11 @@ addon_info = AddonInfo(
 	# Add-on description
 	addon_description=_("""Consolidated accessibility fixes for .NET 4.8 WinForms applications, including ComboBox navigation and MenuItem checked state reporting."""),
 	# version
-	addon_version="0.2.0",
+	addon_version="0.2.1",
 	# Brief changelog for this version
-	addon_changelog=_("""### 0.2.0
-* Restored missing MenuItem description reporting by falling back to legacy properties.
-### 0.1.0
-* Initial release.
-* Fixed ComboBox selection reporting while collapsed (#17454).
-* Fixed ToolStripMenuItem missing checked state reporting (#19335)."""),
+	addon_changelog=_("""### 0.2.1
+
+Bump version, compatible with NVDA 2026.1.0."""),
 	# Author(s)
 	addon_author="Cary-rowen <manchen_0528@outlook.com>",
 	# URL for the add-on documentation support
@@ -32,7 +29,7 @@ addon_info = AddonInfo(
 	# Minimum NVDA version supported
 	addon_minimumNVDAVersion="2023.1.0",
 	# Last NVDA version supported/tested
-	addon_lastTestedNVDAVersion="2025.3.3",
+	addon_lastTestedNVDAVersion="2026.1.0",
 	# Add-on update channel
 	addon_updateChannel=None,
 	# Add-on license
